@@ -37,10 +37,11 @@
         }
     },
     "description": {
-        "fr_FR": "Template servant de base \u00e0 la cr\u00e9ation de plugins pour Jeedom"
+        "fr_FR": "Plugin pour intégrer Niko Home Control II via l'API Hobby",
+        "en_US": "Plugin to integrate Niko Home Control II via the Hobby API"
     },
     "licence": "AGPL",
-    "author": "Jeedom SAS",
+    "author": "Simon BERTIN",
     "require": "4.2",
     "os": {
         "min": 10,
@@ -49,7 +50,7 @@
     "category": "home automation protocol",
     "hasDependency": true,
     "hasOwnDeamon": true,
-    "maxDependancyInstallTime": 0,
+    "maxDependancyInstallTime": 10,
     "changelog_beta": "https://doc.jeedom.com/#language#/plugins/programming/nhc/beta/changelog",
     "changelog": "https://doc.jeedom.com/#language#/plugins/programming/nhc/changelog",
     "documentation_beta": "https://doc.jeedom.com/#language#/plugins/programming/nhc/beta",
@@ -77,5 +78,31 @@
         "docker",
         "diy",
         "mobile"
-    ]
+    ],
+    "parameters": {
+    "host": {
+      "name": "Adresse IP du contrôleur",
+      "type": "input",
+      "default": "",
+      "description": "Adresse IP de votre contrôleur Niko Home Control II"
+    },
+    "port": {
+      "name": "Port",
+      "type": "input", 
+      "default": "8884",
+      "description": "Port de connexion (défaut: 8884)"
+    },
+    "username": {
+      "name": "Nom d'utilisateur",
+      "type": "input",
+      "default": "hobby",
+      "description": "Nom d'utilisateur API Hobby"
+    },
+    "password": {
+      "name": "Mot de passe",
+      "type": "password",
+      "default": "",
+      "description": "Mot de passe API Hobby"
+    }
+  }
 }
